@@ -32,3 +32,22 @@ $custom_tpl_dir = "templates/dsfr";
 $background_image = "";
 $custom_css = "css/dsfr/dsfr.css";
 ```
+
+## Development
+
+To test the theme from current git repository, you will need:
+* Docker image of White Pages
+* The DSFR framework file
+* A local WP configuration file with at least theme configuration described above
+
+You can then run the Docker image with local volumes:
+```
+docker run -p 8080:80 \
+  -v /path/to/conf/config.local.inc.php:/var/www/conf/config.inc.local.php \
+  -v /path/to/dsfr/dist:/var/www/htdocs/vendor/dsfr \
+  -v $PWD/templates/dsfr:/var/www/templates/dsfr \
+  -v $PWD/htdocs/css/dsfr:/var/www/htdocs/css/dsfr \
+  -it docker.io/ltbproject/white-pages:latest
+```
+
+Then connect on [http://localhost:8080](http://localhost:8080)
