@@ -1,4 +1,4 @@
-<!--/div-->
+</div>
 
 {if $display_footer}
 <footer class="fr-footer" role="contentinfo" id="footer">
