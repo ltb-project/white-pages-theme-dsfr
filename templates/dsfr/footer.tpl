@@ -38,7 +38,7 @@
 <script src="vendor/datatables/buttons.html5.min.js"></script>
 <script src="vendor/datatables/buttons.print.min.js"></script>
 <script src="vendor/datatables/buttons.bootstrap5.min.js"></script>
-<script type="module" src=vendor/dsfr/dsfr.module.min.js"></script>
+<script type="module" src="vendor/dsfr/dsfr.module.min.js"></script>
 <script type="text/javascript" nomodule src="vendor/dsfr/dsfr.nomodule.min.js"></script>
 {/if}
 {if $use_updateinfos}
