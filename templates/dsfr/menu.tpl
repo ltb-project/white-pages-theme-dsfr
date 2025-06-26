@@ -29,17 +29,17 @@
                 {/if}
                 {if $use_directory}
                 <li class="fr-nav__item">
-                  <a class="fr-nav__link{if $page=="directory"} active{/if}" href="index.php?page=directory"><i class="fa fa-fw fa-th-list"></i> {$msg_directory}</a>
+                  <a class="fr-nav__link" {if $page=="directory"} aria-current="page"{/if} href="index.php?page=directory"><i class="fa fa-fw fa-th-list"></i> {$msg_directory}</a>
                 </li>
                 {/if}
                 {if $use_gallery}
                 <li class="fr-nav__item">
-                  <a class="fr-nav__link{if $page=="gallery"} active{/if}" href="index.php?page=gallery"><i class="fa fa-fw fa-user-circle"></i> {$msg_gallery}</a>
+                  <a class="fr-nav__link" {if $page=="gallery"} aria-current="page"{/if} href="index.php?page=gallery"><i class="fa fa-fw fa-user-circle"></i> {$msg_gallery}</a>
                 </li>
                 {/if}
                 {if $use_map}
                 <li class="fr-nav__item">
-                  <a class="fr-nav__link{if $page=="map"} active{/if}"  href="index.php?page=map"><i class="fa fa-fw fa-globe"></i> {$msg_map}</a>
+                  <a class="fr-nav__link" {if $page=="map"} aria-current="page"{/if}  href="index.php?page=map"><i class="fa fa-fw fa-globe"></i> {$msg_map}</a>
                 </li>
                 {/if}
                 {if $require_auth and $userdn and $display_myaccount_menu}
