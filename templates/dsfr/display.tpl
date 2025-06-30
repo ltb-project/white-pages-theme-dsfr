@@ -53,7 +53,7 @@
                 <a href="index.php?page=display&dn={$entry.dn|escape:'url'}&search={$search}&vcard=1" class="btn btn-secondary" role="button"><i class="fa fa-fw fa-download"></i> {$msg_downloadvcard}</a>
 {/if}
 {if {$use_updateinfos and $dn == $userdn}}
-                <div class="fr-fieldset__element"> <!--dsfr submit button-->
+                <div class="fr-fieldset__element"> <!--dsfr button-->
                         <div class="fr-btns-group--right">
                             <a href="index.php?page=updateinfos" role="button" class="fr-mt-2v fr-btn fr-btn">
                                 {$msg_editentry}
