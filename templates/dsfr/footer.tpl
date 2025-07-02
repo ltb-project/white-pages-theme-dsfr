@@ -14,13 +14,19 @@
         <div class="fr-footer__bottom">
             <ul class="fr-footer__bottom-list">
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Plan du site</a>
+                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_1_address}">{$msg_footer_link_1_name}</a>
                 </li>
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Accessibilité : non/partiellement/totalement conforme</a>
+                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_2_address}">{$msg_footer_link_2_name}</a>
                 </li>
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_3_address}">{$msg_footer_link_3_name}s</a>
+                </li>
+                <li class="fr-footer__bottom-item">
+                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_4_address}">{$msg_footer_link_4_name}</a>
+                </li>
+                <li class="fr-footer__bottom-item">
+                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_5_address}">{$msg_footer_link_5_name}</a>
                 </li>
             </ul>
         </div>
