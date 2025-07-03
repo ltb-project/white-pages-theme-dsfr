@@ -33,6 +33,28 @@ $background_image = "";
 $custom_css = "css/dsfr/dsfr.css";
 ```
 
+### Entity name
+
+```php
+$messages['dsfr_entity_name'] = "Ministère<br>de ...";
+```
+
+### Footer links
+
+```php
+$tpl_dsfr_footer_links = array(
+    array( "id" => "accessibilite", "url" => "#"),
+    array( "id" => "aide", "url" => "# "),
+    array( "id" => "mentionslegales", "url" => "# "),
+    array( "id" => "politiquecookies", "url" => "# "),
+);
+
+$messages["dsfr_footer_link_accessibilite"] = "Accessibilité : non/partiellement/totalement conforme";
+$messages["dsfr_footer_link_aide"] = "Aide en ligne";
+$messages["dsfr_footer_link_mentionslegales"] = "Mentions légales";
+$messages["dsfr_footer_link_politiquecookies"] = "Politique des cookies";
+```
+
 ## Development
 
 To test the theme from current git repository, you will need:

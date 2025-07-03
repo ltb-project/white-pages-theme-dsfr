@@ -11,25 +11,17 @@
                 <div>LDAP Tool Box White Pages - version {$version}</div>
             </div>
         </div>
+        {if $dsfr_footer_links}
         <div class="fr-footer__bottom">
             <ul class="fr-footer__bottom-list">
+                {foreach $dsfr_footer_links as $footer_link}
                 <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_1_address}">{$msg_footer_link_1_name}</a>
+                    <a class="fr-footer__bottom-link" href="{$footer_link.url}">{$msg_dsfr_footer_link_{$footer_link.id}}</a>
                 </li>
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_2_address}">{$msg_footer_link_2_name}</a>
-                </li>
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_3_address}">{$msg_footer_link_3_name}s</a>
-                </li>
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_4_address}">{$msg_footer_link_4_name}</a>
-                </li>
-                <li class="fr-footer__bottom-item">
-                    <a class="fr-footer__bottom-link" href="{$msg_footer_link_5_address}">{$msg_footer_link_5_name}</a>
-                </li>
+                {/foreach}
             </ul>
         </div>
+        {/if}
     </div>
 </footer>
 {/if}
