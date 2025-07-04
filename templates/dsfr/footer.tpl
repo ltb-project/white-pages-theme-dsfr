@@ -5,16 +5,27 @@
     <div class="fr-container">
         <div class="fr-footer__body">
             <div class="fr-footer__brand fr-enlarge-link">
-                <p class="fr-logo">{$msg_dsfr_entity_name nofilter}</p>
+                <a href="index.php">
+                  <p class="fr-logo">{$msg_dsfr_entity_name nofilter}</p>
+                </a>
             </div>
             <div class="fr-footer__content">
                 <div>LDAP Tool Box White Pages - version {$version}</div>
+              {if $dsfr_footer_content_links}
+                  <ul class="fr-footer__content-list">
+                    {foreach $dsfr_footer_content_links as $footer_link}
+                    <li class="fr-footer__content-item">
+                      <a class="fr-footer__content-link" href="{$footer_link.url}" target="_blank" rel="noopener external">{$msg_dsfr_footer_link_{$footer_link.id}}</a>
+                    </li>
+                    {/foreach}
+                  </ul>
+              {/if}
             </div>
         </div>
-        {if $dsfr_footer_links}
+        {if $dsfr_footer_bottom_links}
         <div class="fr-footer__bottom">
             <ul class="fr-footer__bottom-list">
-                {foreach $dsfr_footer_links as $footer_link}
+                {foreach $dsfr_footer_bottom_links as $footer_link}
                 <li class="fr-footer__bottom-item">
                     <a class="fr-footer__bottom-link" href="{$footer_link.url}">{$msg_dsfr_footer_link_{$footer_link.id}}</a>
                 </li>
