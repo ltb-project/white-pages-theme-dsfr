@@ -11,7 +11,7 @@
                 <img src="photo.php?dn={$entry.dn|escape:'url'}" alt="{$entry.{$attributes_map.{$card_title}.attribute}.0}" class="img-fluid mx-auto d-block "/>
                 {/if}
             </div>
-            <div class="fr-container fr-mt-7v">
+            <div class="fr-container fr-mt-7v text-left">
                 {foreach $card_items as $item}
                 {$attribute=$attributes_map.{$item}.attribute}
                 {$type=$attributes_map.{$item}.type}
@@ -20,14 +20,14 @@
                 {if !({$entry.$attribute.0}) && ! $show_undef}
                     {continue}
                 {/if}
-                    <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--left">
+                    <div class="row gx-5 row-cols-sm-2 row-cols-1">
                    <!--     <th class="text-center">
                             <i class="fa fa-fw fa-{$faclass}"></i>
                         </th>-->
-                        <div id="table-info-annuaire" class="fr-col-6 hidden-xs" style="border-right-style: solid;border-right-width: 0.3px;border-color: var(--grey-625-425);">
+                        <div id="table-info-annuaire" class="col fr-pb-md-2v" style="border-right-style: solid;border-right-width: 0.3px;border-color: var(--grey-625-425);">
                             <b>{$msg_label_{$item}}</b>
                         </div>
-                        <div id="table-info-annuaire" class="fr-col fr-pl-7v">
+                        <div id="table-info-annuaire" class="col fr-pb-2v">
                         {if ({$entry.$attribute.0})}
                             {foreach $entry.{$attribute} as $value}
                             {include 'value_displayer.tpl' item=$item value=$value type=$type truncate_value_after=10000}
