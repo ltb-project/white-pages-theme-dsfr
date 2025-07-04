@@ -7,21 +7,20 @@
                 <div class="fr-header__brand fr-enlarge-link">
                     <div class="fr-header__brand-top">
                         <div class="fr-header__logo">
+                         <a href="index.php">
                             <p class="fr-logo">{$msg_dsfr_entity_name nofilter}</p>
+                         </a>
                         </div>
                     </div>
-                    <div class="fr-header__service">
-                        <a href="index.php">
-                            <p class="fr-header__service-title">{$msg_title}</p>
-                        </a>
-                        <p class="fr-header__service-tagline">{$msg_title}</p>
-                    </div>
                 </div>
+                    <div class="fr-header__service">
+                            <p class="fr-header__service-title">{$msg_dsfr_site_name}</p>
+                    </div>
+
             </div>
         </div>
     </div>
         {include file="menu.tpl"}
-       <!--dsfr pas d'alternative, le menu doit être présent et s'il y a un titre c'est dans le main-->
 </header>
 
 <main role="main" id="content">

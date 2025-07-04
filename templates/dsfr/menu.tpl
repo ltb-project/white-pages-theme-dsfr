@@ -44,7 +44,7 @@
                 {/if}
                 {if $require_auth and $userdn and $display_myaccount_menu}
                 <li class="fr-nav__item">
-                  <a class="fr-nav__link" {if $page=="display"} aria-current="page"{/if} href="index.php?page=myaccount"><i class="fa fa-fw fa-user"></i> {$msg_myaccount}</a>
+                  <a class="fr-nav__link" {if $page=="display"} aria-current="page"{/if} href="index.php?page=myaccount">{$msg_myaccount}</a>
                 </li>
                 {/if}
                 {if (!$require_auth and $logout_link) or ($require_auth and $userdn)}
