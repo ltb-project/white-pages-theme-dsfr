@@ -10,13 +10,12 @@
                          <a href="index.php">
                             <p class="fr-logo">{$msg_dsfr_entity_name nofilter}</p>
                          </a>
-                        </div>
+                         </div>
+                    </div>
+                    <div class="fr-header__service">
+                        <p class="fr-header__service-title">{$msg_dsfr_site_name}</p>
                     </div>
                 </div>
-                    <div class="fr-header__service">
-                            <p class="fr-header__service-title">{$msg_dsfr_site_name}</p>
-                    </div>
-
             </div>
         </div>
     </div>
