@@ -20,3 +20,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#left-col-info-annuaire {
+  border-right-style: solid;
+  border-right-width: 0.3px;
+  border-color: var(--grey-625-425);
+
+  @media (max-width: 575px) {
+    border: none;
+  }
+}
+

@@ -24,10 +24,10 @@
                    <!--     <th class="text-center">
                             <i class="fa fa-fw fa-{$faclass}"></i>
                         </th>-->
-                        <div id="table-info-annuaire" class="col fr-pb-md-2v" style="border-right-style: solid;border-right-width: 0.3px;border-color: var(--grey-625-425);">
+                        <div id="left-col-info-annuaire" class="col fr-pb-md-2v">
                             <b>{$msg_label_{$item}}</b>
                         </div>
-                        <div id="table-info-annuaire" class="col fr-pb-2v">
+                        <div id="right-col-info-annuaire" class="col fr-pb-2v">
                         {if ({$entry.$attribute.0})}
                             {foreach $entry.{$attribute} as $value}
                             {include 'value_displayer.tpl' item=$item value=$value type=$type truncate_value_after=10000}
