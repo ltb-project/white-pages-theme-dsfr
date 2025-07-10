@@ -23,6 +23,7 @@ Copy them to `htdocs/vendor/dsfr` in the White Pages installation directory.
 Copy these files into the White Pages installation directory:
 * `templates/dsfr/*` : all overriden template files
 * `htdocs/css/dsfr/dsfr.css`: custom CSS file
+* `htdocs/css/dsfr/dsfr.js`: custom JS file
 
 ## Theme configuration
 
@@ -31,6 +32,52 @@ In your `config.inc.local.php` adjust these settings:
 $custom_tpl_dir = "templates/dsfr";
 $background_image = "";
 $custom_css = "css/dsfr/dsfr.css";
+```
+
+### Entity name
+
+```php
+$messages['dsfr_entity_name'] = "Ministère<br>de ...";
+```
+
+### Site name
+
+Title displayed at top of the page:
+```php
+$messages['dsfr_site_name'] = "Annuaire interne du Ministère";
+```
+
+### Footer links
+
+In footer content:
+
+```php
+$tpl_dsfr_footer_content_links = array(
+    array( "id" => "infogouv", "url" => "https://info.gouv.fr"),
+    array( "id" => "servicepublic", "url" => "https://service-public.fr"),
+    array( "id" => "legifrance", "url" => "https://legifrance.gouv.fr"),
+    array( "id" => "datagouv", "url" => "https://data.gouv.fr"),
+);
+
+$messages["dsfr_footer_link_infogouv"] = "info.gouv.fr";
+$messages["dsfr_footer_link_servicepublic"] = "service-public.fr";
+$messages["dsfr_footer_link_legifrance"] = "legifrance.gouv.fr";
+$messages["dsfr_footer_link_datagouv"] = "data.gouv.fr";
+```
+
+Below footer:
+```php
+$tpl_dsfr_footer_bottom_links = array(
+    array( "id" => "accessibilite", "url" => "#"),
+    array( "id" => "aide", "url" => "# "),
+    array( "id" => "mentionslegales", "url" => "# "),
+    array( "id" => "politiquecookies", "url" => "# "),
+);
+
+$messages["dsfr_footer_link_accessibilite"] = "Accessibilité : non/partiellement/totalement conforme";
+$messages["dsfr_footer_link_aide"] = "Aide en ligne";
+$messages["dsfr_footer_link_mentionslegales"] = "Mentions légales";
+$messages["dsfr_footer_link_politiquecookies"] = "Politique des cookies";
 ```
 
 ## Development
@@ -47,6 +94,7 @@ docker run -p 8080:80 \
   -v /path/to/dsfr/dist:/var/www/htdocs/vendor/dsfr \
   -v $PWD/templates/dsfr:/var/www/templates/dsfr \
   -v $PWD/htdocs/css/dsfr:/var/www/htdocs/css/dsfr \
+  -v $PWD/htdocs/js/dsfr:/var/www/htdocs/js/dsfr \
   -it docker.io/ltbproject/white-pages:latest
 ```
 
