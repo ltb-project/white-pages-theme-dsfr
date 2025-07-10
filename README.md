@@ -23,6 +23,7 @@ Copy them to `htdocs/vendor/dsfr` in the White Pages installation directory.
 Copy these files into the White Pages installation directory:
 * `templates/dsfr/*` : all overriden template files
 * `htdocs/css/dsfr/dsfr.css`: custom CSS file
+* `htdocs/css/dsfr/dsfr.js`: custom JS file
 
 ## Theme configuration
 
@@ -69,6 +70,7 @@ docker run -p 8080:80 \
   -v /path/to/dsfr/dist:/var/www/htdocs/vendor/dsfr \
   -v $PWD/templates/dsfr:/var/www/templates/dsfr \
   -v $PWD/htdocs/css/dsfr:/var/www/htdocs/css/dsfr \
+  -v $PWD/htdocs/js/dsfr:/var/www/htdocs/js/dsfr \
   -it docker.io/ltbproject/white-pages:latest
 ```
 

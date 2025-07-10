@@ -145,6 +145,8 @@
 {if $use_updateinfos}
 <script src="js/update.js"></script>
 {/if}
+<!-- Custom JS for DSFR theme -->
+<script src="js/dsfr/dsfr.js"></script>
 
 {literal}
     <script type="text/javascript">
