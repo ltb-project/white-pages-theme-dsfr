@@ -5,7 +5,10 @@
 {else if $type eq 'mailto'}
     <input type="email" name="{$item}{$itemindex}" class="fr-input" value="{$value}" data-role="value" />
 {else if $type eq 'tel'}
-    <input type="tel" name="{$item}{$itemindex}" class="fr-input" value="{$value}" data-role="value" />
+    <div class="fr-input-group">
+    <input type="tel" name="{$item}{$itemindex}" class="fr-input" value="{$value}" pattern="\+33 \d \d\d \d\d \d\d \d\d" title="+33 d dd dd dd dd"  data-role="value" />
+    <label for="{$item}{$itemindex}"><span class="fr-hint-text">Utilisez le format +33 d dd dd dd dd</span></label>
+    </div>
 {else if $type eq 'boolean'}
     <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" name="{$item}{$itemindex}" {if $value eq 'TRUE'} checked{/if} value="TRUE" data-role="value" />
@@ -28,6 +31,7 @@
     <input type="text" class="fr-input" value="{get_attribute dn="{$value}" attribute="cn" ldap_url="{$ldap_params.ldap_url}" ldap_starttls="{$ldap_params.ldap_starttls}" ldap_binddn="{$ldap_params.ldap_binddn}" ldap_bindpw="{$ldap_params.ldap_bindpw}" ldap_filter="{$ldap_params.ldap_user_filter}" ldap_network_timeout="{$ldap_params.ldap_network_timeout}"}" data-role="display"/>
     <input type="hidden" name="{$item}{$itemindex}" value="{$value}" data-role="value" />
     <div class="z-3 list-group dn_link_suggestions"></div>
+     <label for="{$item}{$itemindex}"><span class="fr-hint-text">Tapez 3 caractères et sélectionnez un résultat</span></label>
     </div>
 {else}
     <input type="text" name={$item} class="fr-input" value="{$value}" data-role="value" />
