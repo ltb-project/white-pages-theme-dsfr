@@ -10,8 +10,7 @@
                 </a>
             </div>
             <div class="fr-footer__content">
-                <div>LDAP Tool Box White Pages - version {$version}</div>
-              {if $dsfr_footer_content_links}
+                {if $dsfr_footer_content_links}
                   <ul class="fr-footer__content-list">
                     {foreach $dsfr_footer_content_links as $footer_link}
                     <li class="fr-footer__content-item">
