@@ -30,7 +30,7 @@
     <div class="dn_link_container">
     <input type="text" class="fr-input" value="{get_attribute dn="{$value}" attribute="cn" ldap_url="{$ldap_params.ldap_url}" ldap_starttls="{$ldap_params.ldap_starttls}" ldap_binddn="{$ldap_params.ldap_binddn}" ldap_bindpw="{$ldap_params.ldap_bindpw}" ldap_filter="{$ldap_params.ldap_user_filter}" ldap_network_timeout="{$ldap_params.ldap_network_timeout}"}" data-role="display"/>
     <input type="hidden" name="{$item}{$itemindex}" value="{$value}" data-role="value" />
-    <div class="z-3 list-group dn_link_suggestions"></div>
+    <div class="z-3 position-absolute list-group dn_link_suggestions"></div>
      <label for="{$item}{$itemindex}"><span class="fr-hint-text">Tapez 3 caractères et sélectionnez un résultat</span></label>
     </div>
 {else}
