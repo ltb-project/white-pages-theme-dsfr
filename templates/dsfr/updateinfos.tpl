@@ -105,10 +105,8 @@
                 </div>
 
                 <div class="fr-upload-group">
-                    <label class="fr-hint-text"> Taille maximale : 500 Ko. Format supporté : jpg. </label>
+                    <label class="fr-hint-text">{$msg_dsfr_update_photo_info}</label>
                     <input class="fr-upload" type="file" id="formFile" name="photo" />
-<!--                    <div class="fr-messages-group" id="formFile" aria-live="polite"> à quoi ça sert ?
-                    </div>-->
                 </div>
 
                 <div class="fr-fieldset__element">
