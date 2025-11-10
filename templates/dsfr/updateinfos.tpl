@@ -22,8 +22,14 @@
                                 <button type="button" class="fr-mt-7v fr-btn fr-btn" aria-controls="updatePhotoModal" data-fr-opened="false">
                                 {$msg_update_photo}
                                 </button>
+                                {if $photo_defined}
+                                <button type="button" class="fr-mt-7v fr-btn fr-btn--secondary" data-fr-opened="false" aria-controls="deletePhotoModal">
+                                {$msg_delete_photo}
+                                </button>
+                                {/if}
                             </div>
                         </div>
+
                     {/if}
                 </div>
                 {/if}
@@ -105,10 +111,8 @@
                 </div>
 
                 <div class="fr-upload-group">
-                    <label class="fr-hint-text"> Taille maximale : 500 Ko. Format supporté : jpg. </label>
+                    <label class="fr-hint-text">{$msg_dsfr_update_photo_info}</label>
                     <input class="fr-upload" type="file" id="formFile" name="photo" />
-<!--                    <div class="fr-messages-group" id="formFile" aria-live="polite"> à quoi ça sert ?
-                    </div>-->
                 </div>
 
                 <div class="fr-fieldset__element">
@@ -122,11 +126,48 @@
                     </div>
                 </div>
             </div>
-
             </form>
             </div>
         </div>
     </div>
 </div>
 </dialog>
+
+{if $photo_defined}
+<dialog id="deletePhotoModal" tabindex="-1" class="fr-modal" aria-labelledby="deletePhotoModalLabel" data-fr-js-modal="true" a data-fr-concealing-backdrop="true">
+<div class="fr-container fr-container--fluid fr-container-md">
+    <div class="fr-grid-row fr-grid-row--center">
+        <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
+            <div class="fr-modal__body">
+                <form method="post" enctype="multipart/form-data">
+                <input type="hidden" name="dn" value="{$dn}"/>
+                <input type="hidden" name="deletephoto" value="1"/>
+
+                <div class="fr-modal__header">
+                <button aria-controls="deletePhotoModalLabel" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+                </div>
+
+                <div class="fr-modal__content">
+                    <h2 id="deletePhotoModalLabel" class="fr-modal__title">{$msg_delete_photo}</h2>
+                    <p>{$msg_delete_photo_warning}</p>
+
+                    <div class="fr-fieldset__element">
+                        <div class="fr-btns-group--center">
+                            <button type="submit" class="fr-mt-7v fr-btn fr-btn">
+                            {$msg_yes}
+                            </button>
+                            <button aria-controls="deletePhotoModal" type="button" class="fr-mt-7v fr-btn fr-btn--secondary">
+                            {$msg_no}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</dialog>
+{/if}
 {/if}
