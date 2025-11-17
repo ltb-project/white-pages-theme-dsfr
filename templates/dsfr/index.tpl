@@ -28,11 +28,11 @@
       <div class="fr-col-12 fr-col-md-10 fr-col-lg-8">
 
 {if $error}
-<div class="fr-alert fr-alert--error fr-mb-md-6v">{$error}
-</div>
-{else}
-{include file="$page.tpl"}
+{include file="error_message.tpl"}
 {/if}
+
+{include file="$page.tpl"}
+
 
       </div>
     </div>
