@@ -144,7 +144,7 @@
                 <input type="hidden" name="deletephoto" value="1"/>
 
                 <div class="fr-modal__header">
-                <button aria-controls="deletePhotoModalLabel" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+                <button aria-controls="deletePhotoModal" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
                 </div>
 
                 <div class="fr-modal__content">
